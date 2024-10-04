@@ -1,20 +1,36 @@
 {
   "name": "hanviet-pinyin-words",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A list of Chinese/Sino-Vietnamese words according to pinyin. Danh sách từ vựng Hán Việt theo pinyin",
-  "main": "data.json",
+  "main": "src/main.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/**/*.test.js"
   },
-  "keywords": ["chinese", "vietnamese", "han viet", "hanviet", "trung viet", "dictionary", "vocabulary", "word list", "pinyin", "transliteration"],
+  "keywords": [
+    "chinese",
+    "vietnamese",
+    "han viet",
+    "hanviet",
+    "trung viet",
+    "dictionary",
+    "vocabulary",
+    "word list",
+    "pinyin",
+    "transliteration"
+  ],
   "author": "Phong Phan",
   "license": "MIT",
-	"homepage": "https://github.com/ph0ngp/hanviet-pinyin-words",
+  "homepage": "https://github.com/ph0ngp/hanviet-pinyin-words",
   "bugs": {
-		"url": "https://github.com/ph0ngp/hanviet-pinyin-words/issues"
-	},
+    "url": "https://github.com/ph0ngp/hanviet-pinyin-words/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ph0ngp/hanviet-pinyin-words.git"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3"
   }
 }
