@@ -5,7 +5,8 @@
   "main": "src/main.js",
   "type": "module",
   "scripts": {
-    "test": "mocha tests/**/*.test.js"
+    "test": "mocha tests/**/*.test.js",
+    "lint": "eslint src/ tests/"
   },
   "keywords": [
     "chinese",
@@ -30,10 +31,10 @@
     "url": "https://github.com/ph0ngp/hanviet-pinyin-words.git"
   },
   "devDependencies": {
+    "@eslint/js": "^9.12.0",
     "chai": "^5.1.1",
+    "eslint": "^9.12.0",
+    "globals": "^15.10.0",
     "mocha": "^10.7.3"
-  },
-  "engines": {
-    "node": ">=17.1.0"
   }
 }

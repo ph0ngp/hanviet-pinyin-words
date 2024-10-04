@@ -12,12 +12,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - New `getHanviet` function for converting Chinese characters to Sino-Vietnamese (Hán Việt) words.
 - Export of `hanvietData` for direct access to the Hán Việt dictionary.
 - Comprehensive test suite.
-- CI github actions
+- CI github actions: include lint and test
 
 ### Changed
 - Updated project structure to use ES modules.
 - Improved README with more detailed usage instructions and examples.
-- Require NodeJS >= 17.1.0 to use import assertions to load JSON data.
 
 ## [1.0.0] - 2024-10-03
 

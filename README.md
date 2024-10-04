@@ -13,10 +13,6 @@ Ví dụ: `中` có 2 pinyin là `zhōng` và `zhòng`, thì `zhōng` ứng vớ
 
 Dữ liệu chỉ hỗ trợ các chữ Hán phồn thể, không hỗ trợ giản thể vì độ phân biệt của các chữ Hán phồn thể cao hơn giản thể (một chữ Hán giản thể có thể đại diện cho nhiều chữ Hán phồn thể khác nhau). Nếu muốn sử dụng cho giản thể có thể dùng các tool hoặc database khác để convert giữa giản thể - phồn thể.
 
-## Điều kiện:
-
-- NodeJS >= 17.1.0
-
 ## Cài đặt
 
 ```bash

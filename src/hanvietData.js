@@ -1,4 +1,4 @@
-{
+export const hanvietData = {
 "上": {
 "shang3": [
 "thướng"

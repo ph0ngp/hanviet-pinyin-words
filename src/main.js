@@ -1,5 +1,4 @@
-// Import the JSON data
-import hanvietData from './data.json' assert { type: 'json' };
+import {hanvietData} from './hanvietData.js';
 
 const tones = ['1','2','3','4'];
 
@@ -12,13 +11,13 @@ export function getHanviet(tradHanzi, pinyinWords) {
         let hanViet = ''
         for (let i = 0; i < tradHanzi.length; i++) {
             let hv
-            if (hanvietData.hasOwnProperty(tradHanzi[i])) {
+            if (Object.prototype.hasOwnProperty.call(hanvietData, tradHanzi[i])) {
                 const charPinyins = hanvietData[tradHanzi[i]]
                 // console.log('cpy',charPinyins)
                 if (Object.keys(charPinyins).length === 1 && Object.keys(charPinyins)[0]==='*') {
                     hv = charPinyins['*']
                     // console.log('*', hv)
-                } else if (charPinyins.hasOwnProperty(pinyinWords[i].toLowerCase())) {
+                } else if (Object.prototype.hasOwnProperty.call(charPinyins, pinyinWords[i].toLowerCase())) {
                     hv = charPinyins[pinyinWords[i].toLowerCase()]
                     // console.log('py', hv)
                 } else if (pinyinWords[i].slice(-1)==='5') {
@@ -26,7 +25,7 @@ export function getHanviet(tradHanzi, pinyinWords) {
                     const hvSet = new Set();
                     for (const tone of tones) {
                         const pinyinTest = pinyinWords[i].toLowerCase().slice(0, -1) + tone
-                        if (charPinyins.hasOwnProperty(pinyinTest) && charPinyins[pinyinTest].length > 0) {
+                        if (Object.prototype.hasOwnProperty.call(charPinyins, pinyinTest) && charPinyins[pinyinTest].length > 0) {
                             for (const eachHv of charPinyins[pinyinTest]){
                                 if (!hvSet.has(eachHv)) {
                                     hvSet.add(eachHv)

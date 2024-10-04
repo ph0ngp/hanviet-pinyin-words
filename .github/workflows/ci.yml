@@ -33,33 +33,27 @@ jobs:
       - name: Run tests
         run: pnpm test
 
-  # lint:
-  #   runs-on: ubuntu-latest
-  #   name: Lint
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint
 
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-  #     - name: Install pnpm
-  #       uses: pnpm/action-setup@v4
-  #       with:
-  #         version: latest
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
 
-  #     - name: Setup node
-  #       uses: actions/setup-node@v4.0.4
-  #       with:
-  #         node-version: 20
-  #         cache: pnpm
+      - name: Setup node
+        uses: actions/setup-node@v4.0.4
+        with:
+          node-version: 20
+          cache: pnpm
 
-  #     - name: Install
-  #       run: pnpm install --frozen-lockfile
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-  #     - name: Lint
-  #       run: pnpm eslint scripts src tests "*.{cjs,js,json,ts}"
-
-  #     - name: Check formatting
-  #       run: pnpm prettier --check _locales css scripts src tests "*.{js,json,md,ts}"
-
-  #     - name: knip
-  #       run: pnpm knip
+      - name: Run lint
+        run: pnpm lint
