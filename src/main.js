@@ -1,21 +1,15 @@
-// // Import the JSON data
-// import hanvietData from './data.json' assert { type: 'json' };
+// Import the JSON data
+import hanvietData from './data.json' assert { type: 'json' };
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Read the JSON data synchronously
-const hanvietData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data.json'), 'utf8'));
+const tones = ['1','2','3','4'];
 
 export function getHanviet(tradHanzi, pinyinWords) {
     // TA TA [ta1] /he or she/		
     // 馬K3p門门á
-    let hanViet = ''
-    if (pinyinWords.length === tradHanzi.length){
+    if (pinyinWords.length !== tradHanzi.length) {
+        throw new Error(`Length mismatch: tradHanzi (${tradHanzi.length}) and pinyinWords (${pinyinWords.length}) must have the same length.`);
+    } else if (pinyinWords.length === tradHanzi.length) {
+        let hanViet = ''
         for (let i = 0; i < tradHanzi.length; i++) {
             let hv
             if (hanvietData.hasOwnProperty(tradHanzi[i])) {
@@ -28,7 +22,6 @@ export function getHanviet(tradHanzi, pinyinWords) {
                     hv = charPinyins[pinyinWords[i].toLowerCase()]
                     // console.log('py', hv)
                 } else if (pinyinWords[i].slice(-1)==='5') {
-                    const tones = ['1','2','3','4'];
                     let res=''
                     const hvSet = new Set();
                     for (const tone of tones) {
@@ -64,8 +57,8 @@ export function getHanviet(tradHanzi, pinyinWords) {
                 hanViet += ' '
             }
         }
+        return hanViet
     }
-    return hanViet
 }
 
 function isAlphaNumeric(str) {

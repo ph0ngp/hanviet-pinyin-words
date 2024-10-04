@@ -15,9 +15,9 @@ describe('getHanviet', () => {
     expect(getHanviet('判斷', ['pan4', 'duan4'])).to.equal('phán đoạn | đoán');
   });
 
-  it('should return empty string for different length of tradHanzi and pinyinWords', () => {
-    expect(getHanviet('判斷', ['duan4'])).to.equal('');
-    expect(getHanviet('斷', ['pan4', 'duan4'])).to.equal('');
+  it('should throw an error for different length of tradHanzi and pinyinWords', () => {
+    expect(() => getHanviet('判斷', ['duan4'])).to.throw(Error, 'Length mismatch');
+    expect(() => getHanviet('斷', ['pan4', 'duan4'])).to.throw(Error, 'Length mismatch');
   });
 
   it('should use all hanviets it knows for tone 5 char', () => {

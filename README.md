@@ -12,6 +12,10 @@ Ví dụ: `中` có 2 pinyin là `zhōng` và `zhòng`, thì `zhōng` ứng vớ
 
 Dữ liệu chỉ hỗ trợ các chữ Hán phồn thể, không hỗ trợ giản thể vì độ phân biệt của các chữ Hán phồn thể cao hơn giản thể (một chữ Hán giản thể có thể đại diện cho nhiều chữ Hán phồn thể khác nhau). Nếu muốn sử dụng cho giản thể có thể dùng các tool hoặc database khác để convert giữa giản thể - phồn thể.
 
+## Điều kiện:
+
+- NodeJS >= 17.1.0
+
 ## Cài đặt
 
 ```bash
@@ -30,7 +34,7 @@ npm install hanviet-pinyin-words
 import { getHanviet, hanvietData } from 'hanviet-pinyin-words'
 
 // function getHanviet dùng để lấy hán việt từ 1 từ tiếng Hán và 1 array pinyin tương ứng
-// độ dài của từ tiếng Hán phải bằng độ dài của array pinyin. Nếu không sẽ return empty string
+// độ dài của từ tiếng Hán phải bằng độ dài của array pinyin. Nếu không sẽ throw Error
 let hanviet = getHanviet('中國', ['zhong1', 'guo2'])
 console.log(hanviet) // trung quốc
 hanviet = getHanviet('百發百中', ['bai3', 'fa1', 'bai3', 'zhong4'])

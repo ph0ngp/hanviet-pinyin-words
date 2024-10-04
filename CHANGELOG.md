@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0] - 2024-10-04
+## [Unreleased]
 
 ### Added
 - Added CHANGELOG.md
@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated project structure to use ES modules.
 - Improved README with more detailed usage instructions and examples.
+- Require NodeJS >= 17.1.0 to use import assertions to load JSON data.
 
 ## [1.0.0] - 2024-10-03
 
@@ -25,6 +26,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README with basic usage instructions.
 - MIT License.
 
-[unreleased]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.0...HEAD
-[2.0.0]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v1.0.0...v2.0.0
-[1.0.0]: https://github.com/ph0ngp/hanviet-pinyin-words/releases/tag/v1.0.0
+
+## Version diff
+<!-- - Unreleased: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.0...HEAD
+<!-- - 2.0.0: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v1.0.0...v2.0.0  -->
+- 1.0.0: https://github.com/ph0ngp/hanviet-pinyin-words/releases/tag/v1.0.0
