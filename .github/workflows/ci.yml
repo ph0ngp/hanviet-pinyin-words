@@ -1,0 +1,62 @@
+name: CI
+on:
+  push:
+    branches:
+      - 'main'
+    tags:
+      - 'v*'
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Setup node
+        uses: actions/setup-node@v4.0.4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Run tests
+        run: pnpm test
+
+  # lint:
+  #   runs-on: ubuntu-latest
+  #   name: Lint
+
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+
+  #     - name: Install pnpm
+  #       uses: pnpm/action-setup@v4
+  #       with:
+  #         version: latest
+
+  #     - name: Setup node
+  #       uses: actions/setup-node@v4.0.4
+  #       with:
+  #         node-version: 20
+  #         cache: pnpm
+
+  #     - name: Install
+  #       run: pnpm install --frozen-lockfile
+
+  #     - name: Lint
+  #       run: pnpm eslint scripts src tests "*.{cjs,js,json,ts}"
+
+  #     - name: Check formatting
+  #       run: pnpm prettier --check _locales css scripts src tests "*.{js,json,md,ts}"
+
+  #     - name: knip
+  #       run: pnpm knip

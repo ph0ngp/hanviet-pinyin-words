@@ -1,10 +1,11 @@
-# Danh sách từ vựng Hán Việt Pinyin
+# Từ vựng Hán Việt Pinyin
+![CI](https://github.com/ph0ngp/hanviet-pinyin-words/actions/workflows/ci.yml/badge.svg)
 
 ## Giới Thiệu
 
-<!-- TODO convert to typescript, add a linter formatter, CI/CD github actions -->
+<!-- TODO convert to typescript, add a linter formatter -->
 
-Đây là danh sách từ vựng Hán Việt đã được phân loại theo từng phiên âm pinyin.
+Đây là danh sách từ vựng Hán Việt được phân loại theo pinyin và thư viện chuyển đổi chúng.
 
 Các từ điển Hán Việt khác thường chỉ có phiên âm Hán Việt ứng với từng chữ, mà đôi khi một chữ lại có nhiều cách đọc pinyin khác nhau, nên không phân biệt được âm Hán Việt nào tương ứng với âm pinyin nào. Danh sách từ Hán Việt này giải quyết vấn đề đó.
 
