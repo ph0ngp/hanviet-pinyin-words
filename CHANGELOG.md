@@ -27,8 +27,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README with basic usage instructions.
 - MIT License.
 
-
-## Version diff
-- Unreleased: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.0...HEAD
-- 2.0.0: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v1.0.0...v2.0.0 
-- 1.0.0: https://github.com/ph0ngp/hanviet-pinyin-words/releases/tag/v1.0.0
+[Unreleased]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v1.0.0...v2.0.0 
+[1.0.0]: https://github.com/ph0ngp/hanviet-pinyin-words/releases/tag/v1.0.0
