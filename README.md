@@ -3,7 +3,7 @@
 
 ## Giới Thiệu
 
-<!-- TODO convert to typescript, add a linter formatter -->
+<!-- TODO convert to typescript? -->
 
 Đây là danh sách từ vựng Hán Việt được phân loại theo pinyin và thư viện chuyển đổi chúng.
 

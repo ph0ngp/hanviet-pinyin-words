@@ -1,32 +1,51 @@
-import {hanvietData} from './hanvietData.js';
+import { hanvietData } from './hanvietData.js'
 
-const tones = ['1','2','3','4'];
+const tones = ['1', '2', '3', '4']
 
 export function getHanviet(tradHanzi, pinyinWords) {
-    // TA TA [ta1] /he or she/		
+    // TA TA [ta1] /he or she/
     // 馬K3p門门á
     if (pinyinWords.length !== tradHanzi.length) {
-        throw new Error(`Length mismatch: tradHanzi (${tradHanzi.length}) and pinyinWords (${pinyinWords.length}) must have the same length.`);
+        throw new Error(
+            `Length mismatch: tradHanzi (${tradHanzi.length}) and pinyinWords (${pinyinWords.length}) must have the same length.`
+        )
     } else if (pinyinWords.length === tradHanzi.length) {
         let hanViet = ''
         for (let i = 0; i < tradHanzi.length; i++) {
             let hv
-            if (Object.prototype.hasOwnProperty.call(hanvietData, tradHanzi[i])) {
+            if (
+                Object.prototype.hasOwnProperty.call(hanvietData, tradHanzi[i])
+            ) {
                 const charPinyins = hanvietData[tradHanzi[i]]
                 // console.log('cpy',charPinyins)
-                if (Object.keys(charPinyins).length === 1 && Object.keys(charPinyins)[0]==='*') {
+                if (
+                    Object.keys(charPinyins).length === 1 &&
+                    Object.keys(charPinyins)[0] === '*'
+                ) {
                     hv = charPinyins['*']
                     // console.log('*', hv)
-                } else if (Object.prototype.hasOwnProperty.call(charPinyins, pinyinWords[i].toLowerCase())) {
+                } else if (
+                    Object.prototype.hasOwnProperty.call(
+                        charPinyins,
+                        pinyinWords[i].toLowerCase()
+                    )
+                ) {
                     hv = charPinyins[pinyinWords[i].toLowerCase()]
                     // console.log('py', hv)
-                } else if (pinyinWords[i].slice(-1)==='5') {
-                    let res=''
-                    const hvSet = new Set();
+                } else if (pinyinWords[i].slice(-1) === '5') {
+                    let res = ''
+                    const hvSet = new Set()
                     for (const tone of tones) {
-                        const pinyinTest = pinyinWords[i].toLowerCase().slice(0, -1) + tone
-                        if (Object.prototype.hasOwnProperty.call(charPinyins, pinyinTest) && charPinyins[pinyinTest].length > 0) {
-                            for (const eachHv of charPinyins[pinyinTest]){
+                        const pinyinTest =
+                            pinyinWords[i].toLowerCase().slice(0, -1) + tone
+                        if (
+                            Object.prototype.hasOwnProperty.call(
+                                charPinyins,
+                                pinyinTest
+                            ) &&
+                            charPinyins[pinyinTest].length > 0
+                        ) {
+                            for (const eachHv of charPinyins[pinyinTest]) {
                                 if (!hvSet.has(eachHv)) {
                                     hvSet.add(eachHv)
                                     res += eachHv + ' | '
@@ -52,7 +71,7 @@ export function getHanviet(tradHanzi, pinyinWords) {
             } else {
                 hanViet += hv.join(' | ')
             }
-            if (i< tradHanzi.length - 1){
+            if (i < tradHanzi.length - 1) {
                 hanViet += ' '
             }
         }
@@ -64,17 +83,20 @@ function isAlphaNumeric(str) {
     if (!str) {
         return false
     }
-    let code, i, len;
+    let code, i, len
     for (i = 0, len = str.length; i < len; i++) {
-        code = str.charCodeAt(i);
-        if (!(code > 47 && code < 58) && // numeric (0-9)
+        code = str.charCodeAt(i)
+        if (
+            !(code > 47 && code < 58) && // numeric (0-9)
             !(code > 64 && code < 91) && // upper alpha (A-Z)
-            !(code > 96 && code < 123)) { // lower alpha (a-z)
-            return false;
+            !(code > 96 && code < 123)
+        ) {
+            // lower alpha (a-z)
+            return false
         }
     }
-    return true;
-};
+    return true
+}
 
 // Export the data and the function
-export { hanvietData };
+export { hanvietData }
