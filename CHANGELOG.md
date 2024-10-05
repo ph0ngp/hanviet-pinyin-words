@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2024-10-04
+
+### Added
+- Added auto npm publish github action when a new release is published.
+
 ## [2.0.0] - 2024-10-04
 
 ### Added
@@ -29,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README with basic usage instructions.
 - MIT License.
 
-[Unreleased]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.0...HEAD
-[2.0.0]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v1.0.0...v2.0.0 
+[Unreleased]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.0...v2.0.1
+[2.0.0]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/ph0ngp/hanviet-pinyin-words/releases/tag/v1.0.0
