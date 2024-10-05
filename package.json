@@ -1,6 +1,6 @@
 {
   "name": "hanviet-pinyin-words",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Convert Chinese words to Sino-Vietnamese words according to pinyin. Chuyển đổi từ vựng Hán Việt theo pinyin",
   "main": "src/main.js",
   "type": "module",
