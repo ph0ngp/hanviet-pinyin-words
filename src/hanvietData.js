@@ -2408,7 +2408,7 @@ export const hanvietData = {
 },
 "校": {
 "jiao4": [
-"giáo"
+"hiệu"
 ],
 "xiao4": [
 "hiệu"
@@ -5883,7 +5883,7 @@ export const hanvietData = {
 },
 "受": {
 "shou4": [
-"thụ"
+"thọ"
 ]
 },
 "叛": {
@@ -27213,7 +27213,7 @@ export const hanvietData = {
 },
 "濃": {
 "*": [
-"nùng"
+"nồng"
 ]
 },
 "濈": {
@@ -28523,7 +28523,7 @@ export const hanvietData = {
 },
 "獎": {
 "*": [
-"tưởng"
+"thưởng"
 ]
 },
 "獐": {
