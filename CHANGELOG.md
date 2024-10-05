@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2024-10-05
+
+### Changed
+- Separate hanviet data to its own project. This project serves only as the conversion API for the data.
+- Update some words in hanviet data.
+
 ## [2.0.2] - 2024-10-05
 
 ### Changed
@@ -39,7 +45,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README with basic usage instructions.
 - MIT License.
 
-[Unreleased]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.2...HEAD
+[Unreleased]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.2...v2.1.0
 [2.0.2]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v1.0.0...v2.0.0
