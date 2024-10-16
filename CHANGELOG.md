@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Expand the preserved character set to include all printable ASCII characters.
+
 ## [2.1.1] - 2024-10-06
 
 ### Changed

@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { getHanviet, hanvietData } from '../src/main.js'
+import { getHanviet, hanvietData, isPrintableAscii } from '../src/main.js'
 
 describe('getHanviet', () => {
     it('should return correct Hanviet for given tradHanzi and pinyinWords', () => {
@@ -38,8 +38,10 @@ describe('getHanviet', () => {
         expect(getHanviet('玻璃', ['bo1', 'haha'])).to.equal('pha _')
     })
 
-    it('should handle alphanumeric characters', () => {
-        expect(getHanviet('X光', ['X', 'guang1'])).to.equal('X quang')
+    it('should handle printable ASCII characters', () => {
+        expect(
+            getHanviet('X光,abc', ['X', 'guang1', ',', 'a', 'b', 'c'])
+        ).to.equal('X quang , a b c')
     })
 
     it('should return empty string for empty input', () => {
@@ -59,5 +61,12 @@ describe('hanvietData', () => {
         expect(hanvietData['一']).to.deep.equal({
             '*': ['nhất'],
         })
+    })
+})
+
+describe('isPrintableAscii', () => {
+    it('should return true for printable ASCII characters and false for others', () => {
+        expect(isPrintableAscii('Hello, World!~1234567890')).to.be.true
+        expect(isPrintableAscii('oắt')).to.be.false
     })
 })

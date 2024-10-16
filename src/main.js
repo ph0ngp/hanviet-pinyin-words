@@ -57,7 +57,7 @@ export function getHanviet(tradHanzi, pinyinWords) {
                         hv = [res.slice(0, -3)]
                     }
                 }
-            } else if (isAlphaNumeric(tradHanzi[i])) {
+            } else if (isPrintableAscii(tradHanzi[i])) {
                 hv = [tradHanzi[i]]
             }
             // console.log('hv', hv)
@@ -79,19 +79,14 @@ export function getHanviet(tradHanzi, pinyinWords) {
     }
 }
 
-function isAlphaNumeric(str) {
+export function isPrintableAscii(str) {
     if (!str) {
         return false
     }
     let code, i, len
     for (i = 0, len = str.length; i < len; i++) {
         code = str.charCodeAt(i)
-        if (
-            !(code > 47 && code < 58) && // numeric (0-9)
-            !(code > 64 && code < 91) && // upper alpha (A-Z)
-            !(code > 96 && code < 123)
-        ) {
-            // lower alpha (a-z)
+        if (!(code >= 32 && code <= 126)) {
             return false
         }
     }
