@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.2] - 2024-10-16
+
 ### Changed
 - Expand the preserved character set to include all printable ASCII characters.
+- Update hanvietData.js entries
 
 ## [2.1.1] - 2024-10-06
 
@@ -53,7 +56,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README with basic usage instructions.
 - MIT License.
 
-[Unreleased]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.1.1...HEAD
+[Unreleased]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.1.2...HEAD
+[2.1.2]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.1.1...v2.1.2
 [2.1.1]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.2...v2.1.0
 [2.0.2]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.0.1...v2.0.2
