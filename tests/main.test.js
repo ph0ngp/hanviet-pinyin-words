@@ -38,6 +38,21 @@ describe('getHanviet', () => {
         expect(getHanviet('玻璃', ['bo1', 'haha'])).to.equal('pha _')
     })
 
+    it('should handle full-width punctuation', () => {
+        expect(
+            getHanviet('一傳十，十傳百。', [
+                'yi1',
+                'chuan2',
+                'shi2',
+                ',',
+                'shi2',
+                'chuan2',
+                'bai3',
+                '.',
+            ])
+        ).to.equal('nhất truyền thập , thập truyền bách .')
+    })
+
     it('should handle printable ASCII characters', () => {
         expect(
             getHanviet('X光,abc', ['X', 'guang1', ',', 'a', 'b', 'c'])

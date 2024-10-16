@@ -59,6 +59,12 @@ export function getHanviet(tradHanzi, pinyinWords) {
                 }
             } else if (isPrintableAscii(tradHanzi[i])) {
                 hv = [tradHanzi[i]]
+            } else if (tradHanzi[i] === '，' || tradHanzi[i] === '。') {
+                if (tradHanzi[i] === '，') {
+                    hv = [',']
+                } else if (tradHanzi[i] === '。') {
+                    hv = ['.']
+                }
             }
             // console.log('hv', hv)
             //will be undefined if either char not found and char is not alphanumeric, or char found but pinyin not found
