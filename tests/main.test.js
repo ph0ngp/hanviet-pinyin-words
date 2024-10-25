@@ -62,6 +62,13 @@ describe('getHanviet', () => {
     it('should return empty string for empty input', () => {
         expect(getHanviet('', [])).to.equal('')
     })
+
+    it('should return first char uppercase form if firstCharUpperCase is true', () => {
+        expect(getHanviet('中國', ['zhong1', 'guo2'], true)).to.equal(
+            'Trung Quốc'
+        )
+        expect(getHanviet('歐洲', ['ou1', 'zhou1'], true)).to.equal('Âu Châu')
+    })
 })
 
 describe('hanvietData', () => {

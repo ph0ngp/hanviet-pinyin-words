@@ -2,7 +2,7 @@ import { hanvietData } from './hanvietData.js'
 
 const tones = ['1', '2', '3', '4']
 
-export function getHanviet(tradHanzi, pinyinWords) {
+export function getHanviet(tradHanzi, pinyinWords, firstCharUpperCase = false) {
     // TA TA [ta1] /he or she/
     // 馬K3p門门á
     if (pinyinWords.length !== tradHanzi.length) {
@@ -65,6 +65,13 @@ export function getHanviet(tradHanzi, pinyinWords) {
                 } else if (tradHanzi[i] === '。') {
                     hv = ['.']
                 }
+            }
+            if (firstCharUpperCase && hv !== undefined && hv.length > 0) {
+                let newHv = []
+                for (let j = 0; j < hv.length; j++) {
+                    newHv.push(hv[j].charAt(0).toUpperCase() + hv[j].slice(1))
+                }
+                hv = newHv
             }
             // console.log('hv', hv)
             //will be undefined if either char not found and char is not alphanumeric, or char found but pinyin not found
