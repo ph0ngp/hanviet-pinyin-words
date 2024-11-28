@@ -1,5 +1,10 @@
 import { expect } from 'chai'
-import { getHanviet, hanvietData, isPrintableAscii, getAllHanvietsOfChar } from '../src/main.js'
+import {
+    getHanviet,
+    hanvietData,
+    isPrintableAscii,
+    getAllHanvietsOfChar,
+} from '../src/main.js'
 
 describe('getHanviet', () => {
     it('should return correct Hanviet for given tradHanzi and pinyinWords', () => {
@@ -74,7 +79,12 @@ describe('getHanviet', () => {
 describe('getAllHanvietsOfChar', () => {
     it('should return all hanviets of a character', () => {
         expect(getAllHanvietsOfChar('中')).to.deep.equal(['trung', 'trúng'])
-        expect(getAllHanvietsOfChar('咯')).to.deep.equal(['khách','cách', 'lạc', 'khạc'])
+        expect(getAllHanvietsOfChar('咯')).to.deep.equal([
+            'khách',
+            'cách',
+            'lạc',
+            'khạc',
+        ])
         expect(getAllHanvietsOfChar('咱')).to.deep.equal(['ta'])
         expect(getAllHanvietsOfChar('一')).to.deep.equal(['nhất'])
         expect(getAllHanvietsOfChar('嵌')).to.deep.equal(['khảm'])
