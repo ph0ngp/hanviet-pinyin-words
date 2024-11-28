@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { getHanviet, hanvietData, isPrintableAscii } from '../src/main.js'
+import { getHanviet, hanvietData, isPrintableAscii, getAllHanvietsOfChar } from '../src/main.js'
 
 describe('getHanviet', () => {
     it('should return correct Hanviet for given tradHanzi and pinyinWords', () => {
@@ -68,6 +68,32 @@ describe('getHanviet', () => {
             'Trung Quốc'
         )
         expect(getHanviet('歐洲', ['ou1', 'zhou1'], true)).to.equal('Âu Châu')
+    })
+})
+
+describe('getAllHanvietsOfChar', () => {
+    it('should return all hanviets of a character', () => {
+        expect(getAllHanvietsOfChar('中')).to.deep.equal(['trung', 'trúng'])
+        expect(getAllHanvietsOfChar('咯')).to.deep.equal(['khách','cách', 'lạc', 'khạc'])
+        expect(getAllHanvietsOfChar('咱')).to.deep.equal(['ta'])
+        expect(getAllHanvietsOfChar('一')).to.deep.equal(['nhất'])
+        expect(getAllHanvietsOfChar('嵌')).to.deep.equal(['khảm'])
+    })
+
+    it('should return empty array if character not found', () => {
+        expect(getAllHanvietsOfChar('a')).to.deep.equal([])
+        expect(getAllHanvietsOfChar('&')).to.deep.equal([])
+    })
+
+    it('should throw error if tradHanzi is not a single character', () => {
+        expect(() => getAllHanvietsOfChar('ab')).to.throw(
+            Error,
+            'tradHanzi must be a single character'
+        )
+        expect(() => getAllHanvietsOfChar('')).to.throw(
+            Error,
+            'tradHanzi must be a single character'
+        )
     })
 })
 

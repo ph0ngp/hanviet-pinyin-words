@@ -92,6 +92,19 @@ export function getHanviet(tradHanzi, pinyinWords, firstCharUpperCase = false) {
     }
 }
 
+export function getAllHanvietsOfChar(tradHanzi) {
+    if (tradHanzi.length !== 1) {
+        throw new Error('tradHanzi must be a single character')
+    }
+    if (Object.prototype.hasOwnProperty.call(hanvietData, tradHanzi)) {
+        return Object.values(hanvietData[tradHanzi])
+            .flat()
+            .filter((value, index, self) => self.indexOf(value) === index) // Remove duplicates
+    } else {
+        return []
+    }
+}
+
 export function isPrintableAscii(str) {
     if (!str) {
         return false
