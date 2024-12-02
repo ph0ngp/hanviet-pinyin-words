@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.7] - 2024-12-02
+
+### Added
+- Add radicals 礻, 阝,⻏, 耂, 覀, 牜
+
 ## [2.1.6] - 2024-12-02
 
 ### Added
@@ -76,7 +81,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README with basic usage instructions.
 - MIT License.
 
-[Unreleased]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.1.6...HEAD
+[Unreleased]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.1.7...HEAD
+[2.1.7]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.1.6...v2.1.7
 [2.1.6]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.1.5...v2.1.6
 [2.1.5]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.1.4...v2.1.5
 [2.1.4]: https://github.com/ph0ngp/hanviet-pinyin-words/compare/v2.1.3...v2.1.4
